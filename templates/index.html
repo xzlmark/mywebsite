@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>首页</title>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+    <button class="btn btn-secondary">知乎热榜</button>
+        <div class="row align-items-center">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">人民网</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                </nav>
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">半月谈</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">知乎热榜</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="row align-items-center">
+            <div class="col">
+                <div>
+                    {% for info in infos['data']['site']['subs'] %}
+                        {% for i in info['items'] %}
+                            <div>
+                                <a href={{ "https://www.anyknew.com/go/%s" %  i['iid'] }}>
+                                    <span>{{ i['title'] }}</span>
+                                </a>
+                            </div>
+
+                        {% endfor %}
+
+                    {% endfor %}
+                </div>
+
+
+            </div>
+            <div class="col">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">人民网</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                </nav>
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">半月谈</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">知乎热榜</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+{% endblock %}
+
